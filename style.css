@@ -1,0 +1,134 @@
+:root {
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Myfont;
+    src: url(./assets/fonts/Poppins-Bold.ttf);
+}
+
+body {
+    font-family: Myfont;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Off-white);
+}
+
+.card {
+    background-color: var(--White);
+    width: 500px;
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    border-bottom-right-radius: 150px;
+}
+
+.input-container {
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--Light-grey);
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    font-size: 12px;
+}
+
+.input h3 {
+    font-size: 10px;
+    color: var(--Smokey-grey);
+    font-weight: 900;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.input input {
+    padding: 10px;
+    width: 80px;
+    font-size: 16px;
+    color: var(--Off-black);
+    font-weight: 600;
+    border: 1px solid var(--Light-grey);
+    border-radius: 5px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+input:hover {
+    border: 2px solid var(--Purple);
+}
+
+small {
+    display: flex;
+    color: red;
+    font-size: 0.6rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--Purple);
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    right: 30px;
+    top: 100px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: black;
+}
+
+.output {
+    padding-top: 10px;
+}
+
+.output h1 {
+    font-style: italic;
+    color: var(--Purple);
+    font-weight: 900;
+    font-size: 65px;
+    margin-bottom: -26px;
+}
+
+.output span {
+    color: var(--Off-black);
+    font-size: 60px;
+}
+
+@media (max-width: 768px) {
+    input {
+      width: 80%;
+    }
+    .output span {
+      font-size: 1.75rem;
+    }
+    .submit-button {
+      width: 40px;
+      height: 40px;
+      right: 40%;
+      top: 115px;
+    }
+    .submit-button img {
+      transform: scale(0.5);
+    }
+  }
